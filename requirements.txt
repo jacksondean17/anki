@@ -1,1 +1,6 @@
-genanki==0.13.0
+genanki>=1.13.0
+geopandas>=0.14.0
+matplotlib>=3.8.0
+contextily>=1.5.0
+pillow>=10.0.0
+requests>=2.31.0
