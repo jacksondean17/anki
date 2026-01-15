@@ -4,23 +4,19 @@ An Anki flashcard deck to help you learn San Francisco neighborhoods through vis
 
 ## 🎯 Recommended Deck
 
-**`sf_neighborhoods_real.apkg`** - **37 neighborhoods** with real geographic boundaries
+**`sf_neighborhoods_comprehensive.apkg`** - **38 essential neighborhoods** (7.0 MB)
 
-This deck uses actual San Francisco neighborhood boundary data to create accurate maps showing the true shape and location of each neighborhood.
+This is the most complete deck with all the neighborhoods you need to know for fluency in SF discussions. Includes popular neighborhoods like Mission Bay, Dogpatch, Hayes Valley, Tenderloin, NOPA, Japantown, and more that were missing from other datasets.
 
 ### What's Included
 
-**37 San Francisco neighborhoods** including:
+**38 essential San Francisco neighborhoods:**
 
-- Bayview, Bernal Heights, Castro/Upper Market, Chinatown
-- Crocker Amazon, Diamond Heights, Downtown/Civic Center, Excelsior
-- Financial District, Glen Park, Golden Gate Park, Haight Ashbury
-- Inner Richmond, Inner Sunset, Lakeshore, Marina
-- Mission, Nob Hill, Noe Valley, North Beach
-- Ocean View, Outer Mission, Outer Richmond, Outer Sunset
-- Pacific Heights, Parkside, Potrero Hill, Presidio, Presidio Heights
-- Russian Hill, Seacliff, South of Market, Treasure Island/YBI
-- Twin Peaks, Visitacion Valley, West of Twin Peaks, Western Addition
+**Core SF (16):** Financial District, SoMa, Mission, Mission Bay, Castro, Haight Ashbury, Marina, North Beach, Chinatown, Tenderloin, Nob Hill, Russian Hill, Pacific Heights, Hayes Valley, Dogpatch, Potrero Hill
+
+**Frequently Discussed (12):** NOPA, Inner Richmond, Outer Richmond, Inner Sunset, Outer Sunset, Japantown, Western Addition, Presidio, Bernal Heights, Noe Valley, Cole Valley, Lower Haight
+
+**Bonus Neighborhoods (10):** Glen Park, Twin Peaks, Alamo Square, Fillmore, Bayview, Downtown, Presidio Heights, Seacliff, Golden Gate Park, Treasure Island/YBI
 
 ## How It Works
 
@@ -32,7 +28,7 @@ The maps show actual neighborhood boundaries from open data sources, with all ne
 
 ## Installation
 
-1. Download `sf_neighborhoods_real.apkg` from this repository (7.9 MB)
+1. Download `sf_neighborhoods_comprehensive.apkg` from this repository (7.0 MB)
 2. Open Anki on your computer or mobile device
 3. Click "File" → "Import" (or use the import button)
 4. Select the `.apkg` file
@@ -40,39 +36,46 @@ The maps show actual neighborhood boundaries from open data sources, with all ne
 
 ## Regenerating the Deck
 
-To regenerate the deck with real maps:
+To regenerate the comprehensive deck:
 
 ```bash
 # Install dependencies
 pip install -r requirements.txt
 
-# Generate the deck
-python3 generate_deck_real_maps.py
+# Generate the comprehensive deck
+python3 generate_deck_comprehensive.py
 ```
 
 This will:
-1. Download neighborhood boundary data from Code for America's open data
-2. Generate map images for each neighborhood
-3. Create the Anki deck file
+1. Download base neighborhood boundary data from Code for America
+2. Add 10 key neighborhoods that are commonly discussed but missing from official datasets (Mission Bay, Dogpatch, Hayes Valley, Tenderloin, NOPA, Japantown, Cole Valley, Lower Haight, Alamo Square, Fillmore)
+3. Generate map images for all 38 neighborhoods
+4. Create the Anki deck file
 
-## Alternative: Simple SVG Deck
+## Alternative Versions
 
-**`sf_neighborhoods.apkg`** - Simplified version with 14 neighborhoods using basic SVG graphics
+**`sf_neighborhoods_real.apkg`** (7.9 MB) - 37 neighborhoods from official open data sources only
+- Use `python3 generate_deck_real_maps.py` to regenerate
 
-For a lighter deck with simplified maps, use `generate_deck.py` instead.
+**`sf_neighborhoods.apkg`** (71 KB) - 14 neighborhoods with simplified SVG graphics
+- Use `python3 generate_deck.py` to regenerate
 
 ## Files
 
-- `sf_neighborhoods_real.apkg` - Main Anki deck with real maps (recommended)
-- `sf_neighborhoods.apkg` - Simplified Anki deck with SVG graphics
-- `generate_deck_real_maps.py` - Script to generate deck with real maps
+- `sf_neighborhoods_comprehensive.apkg` - **Comprehensive deck with 38 neighborhoods (recommended)**
+- `sf_neighborhoods_real.apkg` - Deck with 37 official neighborhoods
+- `sf_neighborhoods.apkg` - Simplified deck with 14 neighborhoods (SVG graphics)
+- `generate_deck_comprehensive.py` - Script to generate comprehensive deck
+- `generate_deck_real_maps.py` - Script to generate official neighborhoods deck
 - `generate_deck.py` - Script to generate simplified deck
 - `requirements.txt` - Python dependencies
-- `images_real/` - PNG images with real neighborhood boundaries
-- `images/` - SVG images (simplified graphics)
-- `sf_neighborhoods.geojson` - Neighborhood boundary data
+- `images_comprehensive/` - PNG images for comprehensive deck (38 neighborhoods)
+- `images_real/` - PNG images for official neighborhoods (37 neighborhoods)
+- `images/` - SVG images for simplified deck (14 neighborhoods)
+- `sf_neighborhoods_base.geojson` - Base neighborhood boundary data
 
 ## Data Sources
 
 Neighborhood boundary data sourced from:
 - [Code for America Click That Hood](https://github.com/codeforamerica/click_that_hood) - Open neighborhood boundary data
+- Manual additions for 10 commonly-discussed neighborhoods (Mission Bay, Dogpatch, Hayes Valley, Tenderloin, NOPA, Japantown, Cole Valley, Lower Haight, Alamo Square, Fillmore)
