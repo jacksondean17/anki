@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="600" fill="#f0f0f0"/>
+
+  <!-- Water (San Francisco Bay) -->
+  <rect x="0" y="0" width="500" height="120" fill="#a8d8ea"/>
+  <rect x="380" y="120" width="120" height="300" fill="#a8d8ea"/>
+
+  <!-- SF Peninsula outline (simplified) -->
+  <path d="M 100 120 L 400 120 L 400 180 L 420 200 L 420 450 L 400 480 L 350 500 L 250 520 L 150 500 L 100 450 Z"
+        fill="#d0d0d0" stroke="#808080" stroke-width="2"/>
+
+  <!-- Grid for reference -->
+  <line x1="120" y1="120" x2="120" y2="520" stroke="#999" stroke-width="0.5" opacity="0.3"/>
+  <line x1="220" y1="120" x2="220" y2="520" stroke="#999" stroke-width="0.5" opacity="0.3"/>
+  <line x1="320" y1="120" x2="320" y2="520" stroke="#999" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Highlighted neighborhood -->
+  <path d="M 300 240 L 340 240 L 340 280 L 300 280 Z" fill="#DFE6E9" opacity="0.8" stroke="#333" stroke-width="3"/>
+
+  <!-- Title -->
+  <text x="250" y="570" font-family="Arial, sans-serif" font-size="20"
+        fill="#333" text-anchor="middle" font-weight="bold">
+    Which San Francisco neighborhood is highlighted?
+  </text>
+</svg>
