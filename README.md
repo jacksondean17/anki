@@ -10,6 +10,19 @@ Click any download link below. Your mobile browser will download the .apkg file,
 
 ## Available Decks
 
+### [Founder Terms](./founder_terms/)
+
+Master essential startup and founder terminology with comprehensive definitions covering fundraising, hardware, business metrics, legal concepts, and strategy.
+
+**83 terms** covering: Fundraising & VC, Hardware, Business & Financial, Legal, and Strategy (119 KB)
+
+**Download Link:**
+- [Founder Terms](https://raw.githubusercontent.com/jacksondean17/anki/main/founder_terms/founder_terms.apkg)
+
+[View full documentation →](./founder_terms/readme.md)
+
+---
+
 ### [San Francisco Neighborhoods](./sf_neighborhoods/)
 
 Learn San Francisco neighborhood locations through visual map-based flashcards.
