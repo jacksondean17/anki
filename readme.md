@@ -2,6 +2,10 @@
 
 A collection of Anki flashcard decks for learning various topics.
 
+## For AI Instances
+
+If you're an AI creating Anki decks, see **[Creating Anki Decks: AI Guide](./docs/CREATING_ANKI_DECKS.md)** for step-by-step instructions.
+
 ## Available Decks
 
 ### [San Francisco Neighborhoods](./sf_neighborhoods/)
