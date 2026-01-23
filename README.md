@@ -38,6 +38,19 @@ Learn San Francisco neighborhood locations through visual map-based flashcards.
 
 ---
 
+### [Poker Hand Rankings](./poker_hands/)
+
+Master poker hand rankings through recognition-based flashcards with visual examples and Texas Hold'em odds.
+
+**10 cards** covering all standard poker hands from High Card to Royal Flush (133 KB)
+
+**Download Link:**
+- [Poker Hand Rankings](https://raw.githubusercontent.com/jacksondean17/anki/main/poker_hands/poker_hands.apkg)
+
+[View full documentation →](./poker_hands/readme.md)
+
+---
+
 ## 🤖 Instructions for AI Assistants
 
 **For detailed instructions, see [Creating Anki Decks: AI Guide](./docs/CREATING_ANKI_DECKS.md)**
