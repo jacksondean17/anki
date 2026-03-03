@@ -1,0 +1,80 @@
+name: Release Anki Deck
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.apkg'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Find changed decks
+        id: changed
+        run: |
+          changed=$(git diff --name-only HEAD~1 HEAD -- '*.apkg' | head -20)
+          echo "Found changed .apkg files:"
+          echo "$changed"
+          # Encode newlines for GITHUB_OUTPUT
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$changed" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create releases for changed decks
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          while IFS= read -r apkg_file; do
+            [ -z "$apkg_file" ] && continue
+
+            deck_dir=$(dirname "$apkg_file")
+            folder_name=$(basename "$deck_dir")
+
+            # Derive a human-readable deck name from the folder (underscores → spaces, title case)
+            deck_name=$(echo "$folder_name" | tr '_' ' ' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2)); print}')
+
+            # Read version from VERSION file
+            version_file="$deck_dir/VERSION"
+            if [ -f "$version_file" ]; then
+              version=$(tr -d '[:space:]' < "$version_file")
+            else
+              version="1.0.0"
+            fi
+
+            tag="${folder_name}-v${version}"
+            title="${deck_name} v${version}"
+
+            echo "Creating release: $title (tag: $tag)"
+            echo "  Deck file: $apkg_file"
+
+            # Delete existing release/tag if it exists (allows re-releasing the same version)
+            gh release delete "$tag" --yes 2>/dev/null || true
+            git push origin --delete "refs/tags/$tag" 2>/dev/null || true
+
+            gh release create "$tag" "$apkg_file" \
+              --title "$title" \
+              --notes "## ${title}
+
+Anki deck: **${deck_name}**
+Version: \`${version}\`
+
+### How to update this deck
+1. Edit the content in \`${deck_dir}/\`
+2. Bump the version in \`${deck_dir}/VERSION\`
+3. Regenerate the \`.apkg\` file and commit to \`main\`
+4. This workflow will automatically publish a new release
+
+### Install
+Download \`$(basename "$apkg_file")\` and import it into Anki or AnkiDroid."
+
+            echo "Release created: $title"
+          done <<< "${{ steps.changed.outputs.files }}"
