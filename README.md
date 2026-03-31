@@ -51,6 +51,19 @@ Master poker hand rankings through recognition-based flashcards with visual exam
 
 ---
 
+### [Test Deck](./test_deck/)
+
+A minimal test deck to verify Anki package generation works correctly.
+
+**5 cards** covering basic trivia questions (13 KB)
+
+**Download Link:**
+- [Test Deck](https://raw.githubusercontent.com/jacksondean17/anki/main/test_deck/test_deck.apkg)
+
+[View full documentation →](./test_deck/readme.md)
+
+---
+
 ## 🤖 Instructions for AI Assistants
 
 **For detailed instructions, see [Creating Anki Decks: AI Guide](./docs/CREATING_ANKI_DECKS.md)**
