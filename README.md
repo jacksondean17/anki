@@ -38,6 +38,19 @@ Learn San Francisco neighborhood locations through visual map-based flashcards.
 
 ---
 
+### [Megastructures & Space Habitats](./megastructures_space_habitats/)
+
+Learn about hypothetical megastructures and space habitat designs — from near-term proposals to galaxy-scale engineering.
+
+**30 cards** covering: Dyson Structures, Rotating Habitats, Megastructures, Orbital Infrastructure, and Key Concepts (68 KB)
+
+**Download Link:**
+- [Megastructures & Space Habitats](https://raw.githubusercontent.com/jacksondean17/anki/main/megastructures_space_habitats/megastructures_space_habitats.apkg)
+
+[View full documentation →](./megastructures_space_habitats/readme.md)
+
+---
+
 ### [Poker Hand Rankings](./poker_hands/)
 
 Master poker hand rankings through recognition-based flashcards with visual examples and Texas Hold'em odds.
