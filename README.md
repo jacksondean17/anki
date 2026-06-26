@@ -64,6 +64,19 @@ Master poker hand rankings through recognition-based flashcards with visual exam
 
 ---
 
+### [Hardware Security Standards](./hardware_security_standards/)
+
+A reference deck covering the major standards a hardware-security professional is expected to know — organized by function (crypto modules, roots of trust, supply chain, sector-specific) rather than alphabetically.
+
+**42 cards** covering: Cryptographic Modules, Product Evaluation, Hardware Roots of Trust, Platform Firmware, Supply Chain, Algorithms, Automotive, Industrial/OT, and IoT/Consumer (84 KB)
+
+**Download Link:**
+- [Hardware Security Standards](https://raw.githubusercontent.com/jacksondean17/anki/main/hardware_security_standards/hardware_security_standards.apkg)
+
+[View full documentation →](./hardware_security_standards/readme.md)
+
+---
+
 ### [Security & Compliance Certifications](./security_certifications/)
 
 A reference deck covering the major information-security, privacy, government, data-center, and AI frameworks — what each is, who runs it, where it applies, and how strict/common it is.
@@ -112,4 +125,4 @@ Each deck should be in its own subdirectory with:
 
 ---
 
-*Updated: 2026-01-21*
+*Updated: 2026-06-26*
