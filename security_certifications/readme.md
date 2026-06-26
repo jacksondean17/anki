@@ -4,7 +4,7 @@ A reference deck covering 36 of the major information-security, privacy, governm
 
 ## What's Included
 
-**36 cards** spanning five categories: ISMS / General, Government / Defense, Industry-Specific (Privacy / Sector), Data Center / Facility, and Emerging / AI (100 KB).
+**36 cards** spanning five categories: ISMS / General, Government / Defense, Industry-Specific (Privacy / Sector), Data Center / Facility, and Emerging / AI (128 KB).
 
 ## Download
 
@@ -23,6 +23,10 @@ A reference deck covering 36 of the major information-security, privacy, governm
 - **What's included** — scope of the requirements
 - **Strictness** — Low / Medium / High / Very High
 - **Commonality** — Niche / Moderate / Common / Ubiquitous
+- **Renewal / cadence** — audit cycle, surveillance, reauthorization
+- **Cost / effort** — rough barrier to entry
+- **Relationships / overlaps** — what it builds on or maps to
+- **Certificate vs. continuous** — point-in-time vs. ongoing monitoring
 
 ## Topics Covered
 

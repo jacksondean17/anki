@@ -68,7 +68,7 @@ Master poker hand rankings through recognition-based flashcards with visual exam
 
 A reference deck covering the major information-security, privacy, government, data-center, and AI frameworks — what each is, who runs it, where it applies, and how strict/common it is.
 
-**36 cards** covering ISMS / General, Government / Defense, Industry-Specific (Privacy / Sector), Data Center / Facility, and Emerging / AI (100 KB)
+**36 cards** covering ISMS / General, Government / Defense, Industry-Specific (Privacy / Sector), Data Center / Facility, and Emerging / AI (128 KB)
 
 **Download Link:**
 - [Security & Compliance Certifications](https://raw.githubusercontent.com/jacksondean17/anki/main/security_certifications/security_certifications.apkg)
